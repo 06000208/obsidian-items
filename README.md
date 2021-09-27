@@ -53,7 +53,7 @@ I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-fr
 
 - I want to commend the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata
 
-- I would like to thank [Notion.so](https://www.notion.so), [Dynalist](https://dynalist.io), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), and [Pinboard](https://pinboard.in) for 
+- I would like to thank [Notion.so](https://www.notion.so), [Dynalist](https://dynalist.io), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), and [Pinboard](https://pinboard.in) for inspiration
 
 ## Ideas
 
