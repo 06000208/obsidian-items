@@ -17,7 +17,6 @@ On a technical level, the following may be individual items:
 - Markdown notes
 - YAML and JSON Files
 - CSV and TSV Files
-- Obsidian's Tags
 - Folders
 - Files of any type
 - JSON Objects (inside a JSON file's items array)
@@ -37,24 +36,28 @@ Mainly that nothing like this exists yet, not in obsidian or anywhere else, to t
 
 Meanwhile, Obsidian's philosophy and design was very appealing, and it succeeds where so many other things fail, yet it lacks what I need for seamlessly and easily structuring data, rather than notes or knowledge. So I've decided to make it myself & seek out other contributors to make it the best we can.
 
-I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [2](https://forum.obsidian.md/t/relational-databases/10926), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305)) to want this of course, and I'm taking direct inspiration from many pre-existing things:
+I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [2](https://forum.obsidian.md/t/relational-databases/10926), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc...) to want this of course, and I'm taking direct inspiration from many pre-existing things:
 
 - [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
 - [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software)
 - [Task management software](https://en.wikipedia.org/wiki/Task_management#Task_management_software)
 - [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
+- [Note-taking](https://en.wikipedia.org/wiki/Note-taking) software
 - [Browser bookmarks](https://en.wikipedia.org/wiki/Bookmark_(digital))
 - [Wikis](https://en.wikipedia.org/wiki/Wiki)
-- [Note-taking](https://en.wikipedia.org/wiki/Note-taking) software
 - [Knowledge bases](https://en.wikipedia.org/wiki/Knowledge_base)
 - [Password managers](https://en.wikipedia.org/wiki/Password_manager)
 - [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
 
-I want to commend the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata.
+## Credits & Attributions
+
+- I want to commend the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata
+
+- I would like to thank [Notion.so](https://www.notion.so), [Dynalist](https://dynalist.io), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), and [Pinboard](https://pinboard.in) for 
 
 ## Ideas
 
-This section may be moved out of the readme to discussions in the imminent future.
+This section may be moved out of the readme to the repository's discussions forum or wiki in the imminent future
 
 - Metadata Pane, renders the currently focused item's metadata as GUI editable fields
 
@@ -91,3 +94,6 @@ This section may be moved out of the readme to discussions in the imminent futur
 
 - Functional equivalence: The idea that items, although they may be stored in very different ways, may interacted with as though they were the same thing. For example, compare a JSON Object such as `{ "name": "Example", "body": "hello world" }` to a markdown note named `Example` containing `hello world`
   - Obsidian already does this, since it revolves around markdown notes and not markdown files, omitting things like the .md extension from the name
+
+- Exploring obsidian tag + item linking, inspired by [tiddlywiki](https://en.wikipedia.org/wiki/TiddlyWiki)'s behavior and ability to make pages of the same name correspond to tags
+
