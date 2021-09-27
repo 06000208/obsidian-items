@@ -1,18 +1,23 @@
 # Items
 
-A plugin for [obsidian](https://obsidian.md/) that implements "items" and graphical interfaces for editing metadata.
+This is a plugin for [obsidian](https://obsidian.md/) that implements "items" and graphical metadata editing.
 
-This, in essence, provides database-esque functionality and the graphical views/field editing you may be familiar with from [productivity](https://en.wikipedia.org/wiki/Productivity_software) or [collaborative](https://en.wikipedia.org/wiki/Collaborative_software) services such as [notion](https://en.wikipedia.org/wiki/Notion_(productivity_software)), [airtable](https://en.wikipedia.org/wiki/Airtable), [trello](https://en.wikipedia.org/wiki/Trello), etc.
+It aims to provide, in essence, the  database-esque functionality and the graphical views/field editing you may be familiar with from [productivity](https://en.wikipedia.org/wiki/Productivity_software) or [collaborative](https://en.wikipedia.org/wiki/Collaborative_software) services such as [notion](https://en.wikipedia.org/wiki/Notion_(productivity_software)), [airtable](https://en.wikipedia.org/wiki/Airtable), [trello](https://en.wikipedia.org/wiki/Trello), etc. brought to obsidian.
 
-## What is an item?
+This plugin is a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying the same ideas to browser bookmarks.
 
-An item as defined by this plugin is a specific person, place, or thing. In other words, they are data or metadata representing anything, and they can be used in any way. Examples include a markdown note, your favorite video game, an article you want to read later, and so on.
+## Whats an item?
 
-On a technical level, the following may be individual items within the plugin:
+An item as defined by this plugin is a specific person, place, or thing.
+
+In other words, they are data or metadata representing anything, and they can be used in any way. Examples include a markdown note, your favorite video game, an article you want to read later, and so on. Even lists of items can be an item.
+
+On a technical level, the following may be individual items:
 
 - Markdown notes
 - YAML and JSON Files
 - CSV and TSV Files
+- Obsidian's Tags
 - Folders
 - Files of any type
 - JSON Objects (inside a JSON file's items array)
@@ -32,9 +37,7 @@ Mainly that nothing like this exists yet, not in obsidian or anywhere else, to t
 
 Meanwhile, Obsidian's philosophy and design was very appealing, and it succeeds where so many other things fail, yet it lacks what I need for seamlessly and easily structuring data, rather than notes or knowledge. So I've decided to make it myself & seek out other contributors to make it the best we can.
 
-This plugin happens to be a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying the same ideas to browser bookmarks.
-
-I'm [not the first person](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305) to want this of course, and I'm taking direct inspiration from many pre-existing things:
+I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [2](https://forum.obsidian.md/t/relational-databases/10926), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305)) to want this of course, and I'm taking direct inspiration from many pre-existing things:
 
 - [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
 - [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software)
