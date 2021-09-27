@@ -34,7 +34,7 @@ Items can be abstracted from your notes and files in a variety of powerful ways.
 
 And all items may optionally:
 
-- Have metadata (such as title, icon, description, image, tags, any kind of custom name-value field)
+- Have metadata (such as title, icon, description, image, tags, any kind of custom field)
 - Be exclusively metadata (json objects, csv/tsv rows, etc)
 - Contain any number of nested items
 
