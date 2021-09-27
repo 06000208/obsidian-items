@@ -28,17 +28,30 @@ And all items may optionally:
 
 ## Why?
 
-Mainly that nothing like this exists yet, not in obsidian or anywhere else. I've tried too many applications, software, and services to count, and while a handful came close, none were suitable for me or my workflow.
+Mainly that nothing like this exists yet, not in obsidian or anywhere else, to the best of my knowledge. I've tried too many applications and services to count, and while a handful came close, none were suitable for me or my workflow.
 
-Meanwhile, Obsidian's philosophy and design was very appealing for me, with too many advantages to list here, but it lacked the easy way the things I wanted from services 
+Meanwhile, Obsidian's philosophy and design was very appealing, and it succeeds where so many other things fail, yet it lacks what I need for seamlessly and easily structuring data, rather than notes or knowledge. So I've decided to make it myself & seek out other contributors to make it the best we can.
 
+This plugin happens to be a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying the same ideas to browser bookmarks.
 
+I'm [not the first person](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305) to want this of course, and I'm taking direct inspiration from many pre-existing things:
 
-[Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) are incredibly commendable for building on and expanding how the obsidian community uses metadata. Now I wish to take it a step further and 
+- [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
+- [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software)
+- [Task management software](https://en.wikipedia.org/wiki/Task_management#Task_management_software)
+- [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
+- [Browser bookmarks](https://en.wikipedia.org/wiki/Bookmark_(digital))
+- [Wikis](https://en.wikipedia.org/wiki/Wiki)
+- [Note-taking](https://en.wikipedia.org/wiki/Note-taking) software
+- [Knowledge bases](https://en.wikipedia.org/wiki/Knowledge_base)
+- [Password managers](https://en.wikipedia.org/wiki/Password_manager)
+- [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
 
-Not an original idea, of course, as others noticed and desire the same thing as I. So I'm dedicating it to everyone, and seeking contributors who will help design it with me.
+I want to commend the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata.
 
 ## Ideas
+
+This section may be moved out of the readme to discussions in the imminent future.
 
 - Metadata Pane, renders the currently focused item's metadata as GUI editable fields
 
