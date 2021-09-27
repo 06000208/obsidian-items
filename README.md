@@ -39,13 +39,10 @@ Meanwhile, Obsidian's philosophy and design was very appealing, and it succeeds 
 I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [2](https://forum.obsidian.md/t/relational-databases/10926), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc...) to want this of course, and I'm taking direct inspiration from many pre-existing things:
 
 - [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
-- [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software)
-- [Task management software](https://en.wikipedia.org/wiki/Task_management#Task_management_software)
-- [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
-- [Note-taking](https://en.wikipedia.org/wiki/Note-taking) software
+- [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software) 
 - [Browser bookmarks](https://en.wikipedia.org/wiki/Bookmark_(digital))
+- [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
 - [Wikis](https://en.wikipedia.org/wiki/Wiki)
-- [Knowledge bases](https://en.wikipedia.org/wiki/Knowledge_base)
 - [Password managers](https://en.wikipedia.org/wiki/Password_manager)
 - [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
 
@@ -53,7 +50,7 @@ I'm not the first person ([1](https://forum.obsidian.md/t/allow-links-in-yaml-fr
 
 - I want to commend the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata
 
-- I would like to thank [Notion.so](https://www.notion.so), [Dynalist](https://dynalist.io), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), and [Pinboard](https://pinboard.in) for inspiration
+- I would like to thank [Notion.so](https://www.notion.so), [Dynalist](https://dynalist.io), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), [Zotero](https://www.zotero.org/), and [Pinboard](https://pinboard.in) for inspiration
 
 ## Ideas
 
