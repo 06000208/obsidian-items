@@ -1,68 +1,63 @@
 # Items
 
-An [obsidian](https://obsidian.md/) plugin that adds relational data and graphical metadata editing, aiming to give people the tools to structure data in addition to markdown notes and knowledge
+An [obsidian](https://obsidian.md/) plugin that adds graphical metadata editing, with the aim of making it easier to use obsidian for storing and editing data in general.
 
-This provides the database-esque functionality and intuitive editing you may be familiar with from [productivity](https://en.wikipedia.org/wiki/Productivity_software) or [collaborative](https://en.wikipedia.org/wiki/Collaborative_software) services such as [notion](https://en.wikipedia.org/wiki/Notion_(productivity_software)), [airtable](https://en.wikipedia.org/wiki/Airtable), [trello](https://en.wikipedia.org/wiki/Trello), etc.
+This hopes to eventually provide the same database-esque functionality and intuitive editing you may be familiar with from [productivity](https://en.wikipedia.org/wiki/Productivity_software) or [collaborative](https://en.wikipedia.org/wiki/Collaborative_software) services such as [notion](https://en.wikipedia.org/wiki/Notion_(productivity_software)), [airtable](https://en.wikipedia.org/wiki/Airtable), [trello](https://en.wikipedia.org/wiki/Trello), etc.
 
 ⚠️ This is a work in progress, and there are no releases available yet.
 
-This plugin is a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying the same ideas to browser bookmarks.
+This plugin is a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying similar ideas to browser bookmarks.
 
-## Example use cases
+## Features
 
-- Quickly and easily adding/editing metadata (such as yaml fields in a markdown note) via Metadata Pane
-- Templating metadata from existing items so you don't have to manually add fields one by one
-- Using "atomic data" in the same fashion as one might use atomic notes
-- See connections between data at a glance and easily navigate them
-- Gallery views, with items supplying content to be displayed such as an image or description
-- Export your entire vault or specific items to structured JSON or CSV
+- Quickly and easily adding/editing metadata (such as yaml fields in a markdown note) via the Metadata Pane
+<!-- - Using "atomic data" in the same fashion as one might use atomic notes -->
+<!-- - See connections between data at a glance and easily navigate them -->
+<!-- - Gallery views, with items supplying content to be displayed such as an image or description -->
+<!-- - Export your entire vault or specific items to structured JSON or CSV -->
+<!-- - Templating metadata from existing items so you don't have to manually add fields one by one -->
 <!-- - Using a folder (or any item) as a gallery, showing metadata (such as an image) from items within -->
 
 ## Whats an Item?
 
-An item as defined by this plugin is simply [something](https://en.wikipedia.org/wiki/Object_(philosophy)) that can have metadata associated with it, usually a specific , though they can be used for anything. In other words, they are akin to your markdown notes, rows in spreadsheets, database records, kanban cards with custom fields, json objects, and so on.
+An item as defined by this plugin is anything that can have data associated with it. In other words, they are akin to your markdown notes, database records, kanban cards with custom fields, json objects, and so on.
 
-Items can be abstracted from your notes and files in a variety of powerful ways. On a technical level, the following things may be individual items:
+They are an abstraction for the purpose of making a variety of different methods of storing data functionally equivalent, and on a technical level, the following things may be individual items:
 
 - Markdown notes
 - JSON and YAML Files
-- JSON Objects
-- CSV and TSV Files
-- Individual rows of CSV and TSV files
-- Files of any type
-- Folders
+<!-- - JSON Objects -->
+<!-- - CSV and TSV Files -->
+<!-- - Individual rows of CSV and TSV files -->
+<!-- - Files of any type -->
+<!-- - Folders -->
 
-And all items may optionally:
+More methods of item storage are planned.
 
-- Have metadata (such as title, icon, description, image, tags, any kind of custom field)
-- Be exclusively metadata (json objects, csv/tsv rows, etc)
-- Contain any number of nested items
-
+<!-- And all items may optionally: -->
+<!-- - Have metadata (such as title, icon, description, image, tags, custom fields) -->
+<!-- - Be exclusively metadata (json objects, csv/tsv rows, etc) -->
+<!-- - Contain any number of nested items -->
 ## Why?
 
-Nothing quite like this exists yet, not in obsidian or anywhere else, to the best of my knowledge. I've tried too many applications and services to count, and while a handful came close, none were suitable for me or what I needed from them. I came to realize that If I wanted this, I would have to do it myself.
+Nothing quite like this exists yet, to the best of my knowledge. I've tried too many applications and services to count, and while a handful came close, none were suitable for me or what I needed from them.
 
-Obsidian's philosophy and design is very appealing, and it's community is wonderful. It doesn't matter that it lacks this built in, because it can be pushed the extra step.
-
-Think of items as an approach to structuring data, while core obsidian focuses on structuring knowledge and notes.
-
-I'm not the only person to want this or similar things ([1](https://forum.obsidian.md/t/relational-databases/10926), [2](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc), so I feel it's worth making.
-
-Inspiration is being taken from many pre-existing things to make it happen:
-
-- [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
-- [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software) 
-- [Browser bookmarks](https://en.wikipedia.org/wiki/Bookmark_(digital))
-- [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
-- [Wikis](https://en.wikipedia.org/wiki/Wiki)
-- [Password managers](https://en.wikipedia.org/wiki/Password_manager)
-- [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
+Obsidian's philosophy and design is very appealing, and it's community is wonderful. I'm not the only person to want this or similar things ([1](https://forum.obsidian.md/t/relational-databases/10926), [2](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc), so I feel this is worth making.
 
 ## Credits & Attributions
 
 - I want to commend and thank the incredible plugins [Dataview](https://github.com/blacksmithgu/obsidian-dataview), [Templater](https://github.com/SilentVoid13/Templater), [Kanban](https://github.com/mgmeyers/obsidian-kanban), [Metatable](https://github.com/arnau/obsidian-metatable), [Folder Note Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), [MetaEdit](https://github.com/chhoumann/MetaEdit), and [Supercharged Links](https://github.com/mdelobelle/obsidian_supercharged_links) for building on and expanding how the obsidian community uses metadata
 
-- I give my thanks to [Notion.so](https://www.notion.so), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), [Zotero](https://www.zotero.org/), [Firefox](https://www.mozilla.org/en-US/firefox/browsers/), and [Pinboard](https://pinboard.in) for inspiration and providing real world examples of design choices
+- Inspiration is being taken from many pre-existing things to make this plugin happen:
+  - [Productivity software](https://en.wikipedia.org/wiki/Productivity_software)
+  - [Collaborative software](https://en.wikipedia.org/wiki/Collaborative_software) 
+  - [Browser bookmarks](https://en.wikipedia.org/wiki/Bookmark_(digital))
+  - [Reference management software](https://en.wikipedia.org/wiki/Reference_management_software)
+  - [Wikis](https://en.wikipedia.org/wiki/Wiki)
+  - [Password managers](https://en.wikipedia.org/wiki/Password_manager)
+  - [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
+
+- Specifically, I give my thanks to [Notion.so](https://www.notion.so), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), [Zotero](https://www.zotero.org/), [Firefox](https://www.mozilla.org/en-US/firefox/browsers/), and [Pinboard](https://pinboard.in) for inspiration and providing real world examples of design choices
 
 ## Ideas & Questions
 
