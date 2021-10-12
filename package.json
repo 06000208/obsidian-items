@@ -1,7 +1,7 @@
 {
   "name": "obsidian-items",
   "version": "0.0.1",
-  "description": "Items and graphical metadata/yaml editing for obsidian",
+  "description": "Graphical metadata/yaml editing for obsidian",
   "main": "main.js",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
@@ -25,6 +25,10 @@
     "eslint": "^7.32.0",
     "obsidian": "^0.12.0",
     "rollup": "^2.32.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.42.1",
     "tslib": "^2.2.0",
     "typescript": "^4.4.3"
   }

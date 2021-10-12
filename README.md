@@ -1,6 +1,6 @@
 # Items
 
-An [obsidian](https://obsidian.md/) plugin that adds graphical metadata editing, with the aim of making it easier to use obsidian for storing and editing data in general.
+An [obsidian](https://obsidian.md/) plugin that adds a variety of ways to graphically edit metadata, with the aim of improving obsidian for storing and editing data in general.
 
 This hopes to eventually provide the same database-esque functionality and intuitive editing you may be familiar with from [productivity](https://en.wikipedia.org/wiki/Productivity_software) or [collaborative](https://en.wikipedia.org/wiki/Collaborative_software) services such as [notion](https://en.wikipedia.org/wiki/Notion_(productivity_software)), [airtable](https://en.wikipedia.org/wiki/Airtable), [trello](https://en.wikipedia.org/wiki/Trello), etc.
 
@@ -10,7 +10,9 @@ This plugin is a sister project to [item engine](https://github.com/06000208/ite
 
 ## Features
 
-- Quickly and easily adding/editing metadata (such as yaml fields in a markdown note) via the Metadata Pane
+- Easily edit & add metadata (such as yaml fields in a markdown note) via the Metadata Pane
+<!-- - Create new notes in bulk -->
+<!-- - Link tags to specific markdown notes and vice versa -->
 <!-- - Using "atomic data" in the same fashion as one might use atomic notes -->
 <!-- - See connections between data at a glance and easily navigate them -->
 <!-- - Gallery views, with items supplying content to be displayed such as an image or description -->
@@ -22,7 +24,9 @@ This plugin is a sister project to [item engine](https://github.com/06000208/ite
 
 An item as defined by this plugin is anything that can have data associated with it. In other words, they are akin to your markdown notes, database records, kanban cards with custom fields, json objects, and so on.
 
-They are an abstraction for the purpose of making a variety of different methods of storing data functionally equivalent, and on a technical level, the following things may be individual items:
+They are an abstraction for the purpose of enhancing obsidian with new ways to access, edit, and display your notes. <!-- different methods of storing data functionally equivalent -->
+
+On a technical level, the following things may be individual items:
 
 - Markdown notes
 - JSON and YAML Files
@@ -32,7 +36,7 @@ They are an abstraction for the purpose of making a variety of different methods
 <!-- - Files of any type -->
 <!-- - Folders -->
 
-More methods of item storage are planned.
+More are planned.
 
 <!-- And all items may optionally: -->
 <!-- - Have metadata (such as title, icon, description, image, tags, custom fields) -->
@@ -42,7 +46,7 @@ More methods of item storage are planned.
 
 Nothing quite like this exists yet, to the best of my knowledge. I've tried too many applications and services to count, and while a handful came close, none were suitable for me or what I needed from them.
 
-Obsidian's philosophy and design is very appealing, and it's community is wonderful. I'm not the only person to want this or similar things ([1](https://forum.obsidian.md/t/relational-databases/10926), [2](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc), so I feel this is worth making.
+Obsidian's philosophy and design is very appealing, and it's community is wonderful. Being able to extend obsidian in a way that's suitable for the individual is one of it's goals, and I'm not the only person to want this or similar things ([1](https://forum.obsidian.md/t/relational-databases/10926), [2](https://forum.obsidian.md/t/allow-links-in-yaml-front-matter-notion-like-databases-from-metadata-links-as-first-class-citizens/10052), [3](https://discord.com/channels/686053708261228577/694233507500916796/890793522100322305), etc), so I feel this is worth making.
 
 ## Credits & Attributions
 
@@ -57,7 +61,7 @@ Obsidian's philosophy and design is very appealing, and it's community is wonder
   - [Password managers](https://en.wikipedia.org/wiki/Password_manager)
   - [Tag editors](https://en.wikipedia.org/wiki/Tag_editor)
 
-- Specifically, I give my thanks to [Notion.so](https://www.notion.so), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), [Zotero](https://www.zotero.org/), [Firefox](https://www.mozilla.org/en-US/firefox/browsers/), and [Pinboard](https://pinboard.in) for inspiration and providing real world examples of design choices
+- More specifically, I give my thanks to [Notion.so](https://www.notion.so), [Trello](https://trello.com/), [Airtable](https://airtable.com/), [Keepass 2](https://keepass.info), [Google Sheets](https://www.google.com/sheets/about), [tiddlywiki](https://tiddlywiki.com), [Zotero](https://www.zotero.org/), [Firefox](https://www.mozilla.org/en-US/firefox/browsers/), and [Pinboard](https://pinboard.in) for inspiration and providing real world examples of design choices
 
 ## Ideas & Questions
 

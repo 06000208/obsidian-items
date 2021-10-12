@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 4,
+  "eslint.validate": [
+    "javascript",
+  ],
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}

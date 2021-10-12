@@ -9,6 +9,9 @@ package-lock.json
 # build
 main.js
 *.js.map
+build/*
+!build/.gitkeep
 
 # obsidian
 data.json
+
