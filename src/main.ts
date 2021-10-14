@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { App, Notice, Plugin, PluginSettingTab, Setting } from "obsidian";
+import { App, Notice, Plugin, PluginSettingTab, Setting, WorkspaceLeaf, ItemView } from "obsidian";
 import { MetadataPaneView, ItemsPaneView } from "./panes";
 import "./views.css";
 
@@ -18,29 +18,52 @@ export default class ItemsPlugin extends Plugin {
 
     async onload() {
         console.log("loading Items plugin");
+
+        // Settings
         await this.loadSettings();
-
-        this.registerView(MetadataPaneView.viewTypeId, (leaf) => (
-            this.metadataPane = new MetadataPaneView(leaf)
-        ));
-
-        this.registerView(ItemsPaneView.viewTypeId, (leaf) => (
-            this.metadataPane = new ItemsPaneView(leaf)
-        ));
-
         this.addSettingTab(new SettingsTab(this.app, this));
+
+        // Views
+        // Won't be instantiated until setViewState() is used
+        this.metadataPane = null;
+        this.itemsPane = null;
+        this.registerView(MetadataPaneView.viewTypeId, (leaf: WorkspaceLeaf) => (this.metadataPane = new MetadataPaneView(leaf)));
+        this.registerView(ItemsPaneView.viewTypeId, (leaf: WorkspaceLeaf) => (this.itemsPane = new ItemsPaneView(leaf)));
+
+        this.addCommand({
+            id: "toggle-metadata-pane",
+            name: "Toggle Metadata Pane",
+            callback: function() {
+                this.openPane(MetadataPaneView.viewTypeId, true, true);
+            }.bind(this),
+        });
+
+        this.addCommand({
+            id: "toggle-items-pane",
+            name: "Toggle Items Pane",
+            callback: function() {
+                this.openPane(ItemsPaneView.viewTypeId, true, true);
+            }.bind(this),
+        });
+
+        if (this.app.workspace.layoutReady) {
+            this.initWorkspace();
+        } else {
+            // The "layout-ready" event seems to have been removed in favor of onLayoutReady();
+            this.app.workspace.onLayoutReady(this.initWorkspace.bind(this));
+        }
     }
 
     async onunload() {
         console.log("unloading Items plugin");
+        await this.closePanes(MetadataPaneView.viewTypeId, this.metadataPane);
+        await this.closePanes(ItemsPaneView.viewTypeId, this.itemsPane);
+    }
 
-        // Clean up metadata pane
-        await this.metadataPane.onClose();
-        this.app.workspace.getLeavesOfType(MetadataPaneView.viewTypeId).forEach((leaf) => leaf.detach());
-
-        // Clean up items pane
-        await this.itemsPane.onClose();
-        this.app.workspace.getLeavesOfType(ItemsPaneView.viewTypeId).forEach((leaf) => leaf.detach());
+    initWorkspace() {
+        /** @TODO Make these tied to settings */
+        this.openPane(MetadataPaneView.viewTypeId);
+        this.openPane(ItemsPaneView.viewTypeId);
     }
 
     async loadSettings() {
@@ -49,6 +72,24 @@ export default class ItemsPlugin extends Plugin {
 
     async saveSettings() {
         await this.saveData(this.settings);
+    }
+
+    async closePanes(viewType: string, view: MetadataPaneView | ItemsPaneView = null): Promise<void> {
+        // Views aren't instantiated until setViewState() is used
+        if (view) await view.onClose();
+        this.app.workspace.detachLeavesOfType(viewType);
+    }
+
+    async openPane(viewType: string, reveal = false, toggle = false): Promise<void> {
+        if (!this.app.workspace.getLeavesOfType(viewType).length) {
+            await this.app.workspace.getRightLeaf(false).setViewState({
+                type: viewType,
+                active: true,
+            });
+        } else if (toggle) {
+            this.closePanes(viewType);
+        }
+        if (reveal) this.app.workspace.revealLeaf(this.app.workspace.getLeavesOfType(viewType)[0]);
     }
 }
 
@@ -65,7 +106,7 @@ class SettingsTab extends PluginSettingTab {
 
         containerEl.empty();
 
-        containerEl.createEl("h2", { text: "Settings? Yeah" });
+        // containerEl.createEl("h2", { text: "Settings" });
 
         new Setting(containerEl)
             .setName("Setting #1")
