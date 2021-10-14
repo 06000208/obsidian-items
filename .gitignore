@@ -2,16 +2,13 @@
 *.iml
 .idea
 
-# npm
+# Package managers
 node_modules
 package-lock.json
+yarn.lock
 
-# build
-main.js
+# Build
 *.js.map
 build/*
 !build/.gitkeep
-
-# obsidian
-data.json
-
+test-vault/*
