@@ -1,7 +1,7 @@
 {
     // Documentation for extensions.json http://go.microsoft.com/fwlink/?LinkId=827846
     "recommendations": [
-      "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
     ]
 }
