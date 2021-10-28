@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { App, Notice, Plugin, PluginSettingTab, Setting, WorkspaceLeaf, ItemView } from "obsidian";
-import { MetadataPaneView, ItemsPaneView } from "./panes";
-import "./views.css";
+import { MetadataPaneViewType, MetadataPaneView, ItemsPaneViewType, ItemsPaneView } from "./views";
+
+const dev = process.env.BUILD !== "production";
 
 interface ItemsPluginSettings {
     mySetting: string;
@@ -13,39 +14,44 @@ const DEFAULT_SETTINGS: ItemsPluginSettings = {
 
 export default class ItemsPlugin extends Plugin {
     settings: ItemsPluginSettings;
-    metadataPane: MetadataPaneView;
-    itemsPane: ItemsPaneView;
 
     async onload() {
-        console.log("loading Items plugin");
+        if (dev) console.log("loading Items plugin");
 
         // Settings
         await this.loadSettings();
         this.addSettingTab(new SettingsTab(this.app, this));
 
         // Views
-        // Won't be instantiated until setViewState() is used
-        this.metadataPane = null;
-        this.itemsPane = null;
-        this.registerView(MetadataPaneView.viewTypeId, (leaf: WorkspaceLeaf) => (this.metadataPane = new MetadataPaneView(leaf)));
-        this.registerView(ItemsPaneView.viewTypeId, (leaf: WorkspaceLeaf) => (this.itemsPane = new ItemsPaneView(leaf)));
+        this.registerView(MetadataPaneViewType, (leaf: WorkspaceLeaf) => new MetadataPaneView(leaf));
+        this.registerView(ItemsPaneViewType, (leaf: WorkspaceLeaf) => new ItemsPaneView(leaf));
 
+        // Commands
         this.addCommand({
-            id: "toggle-metadata-pane",
+            id: "ie-toggle-metadata-pane",
             name: "Toggle Metadata Pane",
             callback: function() {
-                this.openPane(MetadataPaneView.viewTypeId, true, true);
+                this.openPane(MetadataPaneViewType, true, true);
             }.bind(this),
         });
-
         this.addCommand({
-            id: "toggle-items-pane",
+            id: "ie-toggle-items-pane",
             name: "Toggle Items Pane",
             callback: function() {
-                this.openPane(ItemsPaneView.viewTypeId, true, true);
+                this.openPane(ItemsPaneViewType, true, true);
             }.bind(this),
         });
 
+        // Ribbons
+        if (dev) {
+            this.addRibbonIcon("dice", "Print leaf types", () => {
+                this.app.workspace.iterateAllLeaves((leaf) => {
+                    console.log(leaf.getViewState().type);
+                });
+            });
+        }
+
+        // Initialization
         if (this.app.workspace.layoutReady) {
             this.initWorkspace();
         } else {
@@ -55,15 +61,15 @@ export default class ItemsPlugin extends Plugin {
     }
 
     async onunload() {
-        console.log("unloading Items plugin");
-        await this.closePanes(MetadataPaneView.viewTypeId, this.metadataPane);
-        await this.closePanes(ItemsPaneView.viewTypeId, this.itemsPane);
+        if (dev) console.log("unloading Items plugin");
+        await this.closePanes(MetadataPaneViewType);
+        await this.closePanes(ItemsPaneViewType);
     }
 
     initWorkspace() {
         /** @TODO Make these tied to settings */
-        this.openPane(MetadataPaneView.viewTypeId);
-        this.openPane(ItemsPaneView.viewTypeId);
+        this.openPane(MetadataPaneViewType);
+        this.openPane(ItemsPaneViewType);
     }
 
     async loadSettings() {
@@ -74,9 +80,13 @@ export default class ItemsPlugin extends Plugin {
         await this.saveData(this.settings);
     }
 
-    async closePanes(viewType: string, view: MetadataPaneView | ItemsPaneView = null): Promise<void> {
-        // Views aren't instantiated until setViewState() is used
-        if (view) await view.onClose();
+    async closePanes(viewType: string): Promise<void> {
+        const leaves = this.app.workspace.getLeavesOfType(viewType);
+        for (const leaf of leaves) {
+            if (leaf.view instanceof MetadataPaneView || leaf.view instanceof ItemsPaneView) {
+                await leaf.view.onClose();
+            }
+        }
         this.app.workspace.detachLeavesOfType(viewType);
     }
 
