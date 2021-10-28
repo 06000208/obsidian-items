@@ -30,18 +30,18 @@ On a technical level, the following things may be individual items:
 
 - Markdown notes
 - JSON and YAML Files
-<!-- - JSON Objects -->
-<!-- - CSV and TSV Files -->
-<!-- - Individual rows of CSV and TSV files -->
-<!-- - Files of any type -->
-<!-- - Folders -->
+<!-- - JSON Objects? -->
+<!-- - CSV and TSV Files? -->
+<!-- - Individual rows of CSV and TSV files? -->
+<!-- - Files of any type? -->
+<!-- - Folders? -->
 
 More are planned.
 
 <!-- And all items may optionally: -->
 <!-- - Have metadata (such as title, icon, description, image, tags, custom fields) -->
 <!-- - Be exclusively metadata (json objects, csv/tsv rows, etc) -->
-<!-- - Contain any number of nested items -->
+<!-- - Contain any number of nested items? This one is questionable, if its a form of linking rather than literally containing data thats better, but some items such as folders or json objects by their nature could have nested items. I think this idea was inspired by notion's database like meta structure -->
 ## Why?
 
 Nothing quite like this exists yet, to the best of my knowledge. I've tried too many applications and services to count, and while a handful came close, none were suitable for me or what I needed from them.
@@ -68,10 +68,13 @@ Obsidian's philosophy and design is very appealing, and it's community is wonder
 This section may be moved out of the readme to the repository's discussions forum or wiki in the imminent future
 
 - Goals
-  - I want everything within the plugin to be designed as simple and practical as possible
+  - Things should be designed for and integrated within obsidian itself, and with a user's potential workflows in mind. As opposed to implementing an entire app within a modal or view and causing tension switching back/forth 
+  - Everything within the plugin should be designed as simple and practical as possible
   - Speed and optimization is of great importance. The plugin should never cause obsidian to have worse performance
 
 - Metadata Pane, renders the currently focused item's metadata as GUI editable fields
+  - Would be fully capable of airtable and notion's typed fields, though less static/defined. The types would be parsed from the data itself, and could be easily switched (conversion of data to other structures)
+  - Would fully support linking items inside fields, including arrays/"multiple item" fields
 
 - How are items referenced? Ideally, it would be as easy as linking markdown notes and feature the same autocompletion capabilities.
   - If you wanted to have a gallery view for all items with a tag, or 4 specific items without nesting those items directly, how would you go about that?
@@ -85,7 +88,7 @@ This section may be moved out of the readme to the repository's discussions foru
 - Dunno how feasible is it to add non-markdown file items to core obsidian features like graph view and search. Right now I'm thinking the more concentrated and integrated into obsidian's normal functionality, rather than creating new panes or windows, the better.
 
 - Pane equivalents for the File Explorer, Search, and Tag Panes
-  - Offering too many new panes is not ideal and would be cluttered, make functionality make sense for obsidian instead of building a new app ontop of it
+  - Offering too many new panes is not ideal and would be cluttered, functionality should make sense for obsidian instead of building a new app ontop of it
   
   - Item Explorer Pane
     
