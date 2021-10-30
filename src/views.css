@@ -1,0 +1,18 @@
+.workspace-leaf-content[data-type="ie-metadata-pane"] .view-content,
+.workspace-leaf-content[data-type="ie-items-pane"] .view-content {
+    padding: 0px 10px;
+}
+.nav-ie-container {
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.nav-ie-title {
+    padding-left: 10px;
+    font-size: 16px;
+    color: var(--text-normal);
+    cursor: default;
+    line-height: 20px;
+    white-space: nowrap;
+    width: max-content;
+    min-width: 100%;
+}

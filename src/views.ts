@@ -1,12 +1,16 @@
 import { ItemView, WorkspaceLeaf } from "obsidian";
+import { createButton } from "./gui";
+import { dev } from "./constants";
 import "./views.css";
 
 // Can't define these inside the constructor, because when getViewType is used by obsidian, the constructor somehow hasn't ran yet
 // https://discord.com/channels/686053708261228577/840286264964022302/899785798738640916
 export const MetadataPaneViewType = "ie-metadata-pane";
 export const MetadataPaneDisplayName = "Edit Metadata";
+export const MetadataPaneIcon = "bullet-list";
 export const ItemsPaneViewType = "ie-items-pane";
 export const ItemsPaneDisplayName = "Items";
+export const ItemsPaneIcon = "documents";
 
 /**
  * Edit/add metadata to the currently focused file
@@ -16,18 +20,28 @@ export class MetadataPaneView extends ItemView {
         super(leaf);
     }
 
-    getViewType() {
-        return MetadataPaneViewType;
-    }
+    /** The view type string used by obsidian */
+    getViewType(): string { return MetadataPaneViewType; }
 
-    getDisplayText() {
-        return MetadataPaneDisplayName;
-    }
+    /** Human readable text displayed to the user by obsidian */
+    getDisplayText(): string { return MetadataPaneDisplayName; }
+
+    /** The icon obsidian uses for the view */
+    getIcon(): string { return MetadataPaneIcon; }
 
     async onOpen() {
-        const container = this.containerEl.children[1];
-        container.empty();
-        container.createEl("h4", { text: MetadataPaneDisplayName });
+        // More easily understood and protects against potentially disordered elements than using this.containerEl.children[1];
+        const content = this.containerEl.querySelector(".view-content");
+        content.empty();
+        const header = content.createDiv({ cls: "nav-header" });
+        const buttons = header.createDiv({ cls: "nav-buttons-container" });
+        createButton(buttons, MetadataPaneViewType, "Field Sort Order", "up-and-down-arrows", function(ev, element, viewType) {
+            //
+        });
+        const container = content.createDiv({ cls: "nav-ie-container" });
+        const title = container.createDiv({ cls: "nav-ie-title" });
+        title.createSpan({ text: MetadataPaneDisplayName });
+        if (dev) console.log("Pane opened", this.containerEl);
     }
 
     async onClose() {
@@ -51,18 +65,28 @@ export class ItemsPaneView extends ItemView {
         super(leaf);
     }
 
-    getViewType() {
-        return ItemsPaneViewType;
-    }
+    /** The view type string used by obsidian */
+    getViewType(): string { return ItemsPaneViewType; }
 
-    getDisplayText() {
-        return ItemsPaneDisplayName;
-    }
+    /** Human readable text displayed to the user by obsidian */
+    getDisplayText(): string { return ItemsPaneDisplayName; }
+
+    /** The icon obsidian uses for the view */
+    getIcon(): string { return ItemsPaneIcon; }
 
     async onOpen() {
-        const container = this.containerEl.children[1];
-        container.empty();
-        container.createEl("h4", { text: ItemsPaneDisplayName });
+        // More easily understood and protects against potentially disordered elements than using this.containerEl.children[1];
+        const content = this.containerEl.querySelector(".view-content");
+        content.empty();
+        const header = content.createDiv({ cls: "nav-header" });
+        const buttons = header.createDiv({ cls: "nav-buttons-container" });
+        createButton(buttons, ItemsPaneViewType, "Settings", "gear", function(ev, element, viewType) {
+            //
+        });
+        const container = content.createDiv({ cls: "nav-ie-container" });
+        const title = container.createDiv({ cls: "nav-ie-title" });
+        title.createSpan({ text: ItemsPaneDisplayName });
+        if (dev) console.log("Pane opened", this.containerEl);
     }
 
     async onClose() {
