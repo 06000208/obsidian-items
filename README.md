@@ -127,4 +127,4 @@ This section may be moved out of the readme to the repository's discussions foru
 
 ## Code Of Conduct
 
-This project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating, you're expected to abide by its terms. Please report unacceptable behavior to [a0600208@protonmail.com](mailto:a0600208@protonmail.com)
+This project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in its development, you're expected to abide by its terms. Please report unacceptable behavior to [a0600208@protonmail.com](mailto:a0600208@protonmail.com)
