@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { App, Notice, Plugin, PluginSettingTab, Setting, WorkspaceLeaf, ItemView } from "obsidian";
 import { MetadataPaneViewType, MetadataPaneView, ItemsPaneViewType, ItemsPaneView } from "./views";
-
-const dev = process.env.BUILD !== "production";
+import { dev } from "./constants";
 
 interface ItemsPluginSettings {
     mySetting: string;
