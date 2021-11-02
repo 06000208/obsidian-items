@@ -30,8 +30,7 @@ export class MetadataPaneView extends ItemView {
     getIcon(): string { return MetadataPaneIcon; }
 
     async onOpen() {
-        // More easily understood and protects against potentially disordered elements than using this.containerEl.children[1];
-        const content = this.containerEl.querySelector(".view-content");
+        const content = this.containerEl.children[1]; // this.containerEl.querySelector(".view-content");
         content.empty();
         const header = content.createDiv({ cls: "nav-header" });
         const buttons = header.createDiv({ cls: "nav-buttons-container" });
@@ -75,8 +74,7 @@ export class ItemsPaneView extends ItemView {
     getIcon(): string { return ItemsPaneIcon; }
 
     async onOpen() {
-        // More easily understood and protects against potentially disordered elements than using this.containerEl.children[1];
-        const content = this.containerEl.querySelector(".view-content");
+        const content = this.containerEl.children[1]; // this.containerEl.querySelector(".view-content");
         content.empty();
         const header = content.createDiv({ cls: "nav-header" });
         const buttons = header.createDiv({ cls: "nav-buttons-container" });
