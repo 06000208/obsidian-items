@@ -6,7 +6,7 @@ This hopes to eventually provide the same database-esque functionality and intui
 
 ⚠️ This is a work in progress, and there are no releases available yet.
 
-This plugin is a sister project to [item engine](https://github.com/06000208/item-engine), a WebExtension applying similar ideas to browser bookmarks.
+This plugin is a sister project to the [items browser extension](https://github.com/06000208/items-extension), a WebExtension implementing the same ideas in a browser, and [items service](https://github.com/06000208/items-service), a node.js web server implementation
 
 ## Features
 
